@@ -100,7 +100,7 @@
 #endif
 
 #ifdef OPLUS_FEATURE_PHOENIX
-#include "../drivers/soc/oplus/xsystem/oplus_phoenix/oplus_phoenix.h"
+#include "../drivers/soc/oplus/system/oplus_phoenix/oplus_phoenix.h"
 #endif
 
 static int kernel_init(void *);
