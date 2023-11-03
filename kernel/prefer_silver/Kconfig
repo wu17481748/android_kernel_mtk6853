@@ -1,0 +1,5 @@
+config OPLUS_PREFER_SILVER
+	default n
+	bool "a task placement decision for non-ui task"
+	help
+	  task placement decision feature for non-ui task
