@@ -32,7 +32,7 @@ source "drivers/soc/oplus/svelte/Kconfig"
 #endif /* OPLUS_FEATURE_MEMLEAK_DETECT */
 
 #ifdef OPLUS_BUG_STABILITY
-source "drivers/soc/oplus/system/Kconfig"
+source "drivers/soc/oplus/xsystem/Kconfig"
 #endif /* OPLUS_BUG_STABILITY */
 
 #ifdef OPLUS_FEATURE_TP_BASIC
