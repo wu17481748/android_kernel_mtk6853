@@ -33,7 +33,7 @@
 #define PANIC_BLINK_SPD 18
 
 #ifdef OPLUS_FEATURE_PHOENIX
-#include "../drivers/soc/oplus/system/oplus_phoenix/oplus_phoenix.h"
+#include "../drivers/soc/oplus/xsystem/oplus_phoenix/oplus_phoenix.h"
 #include <linux/timer.h>
 #include <linux/timex.h>
 #include <linux/rtc.h>
