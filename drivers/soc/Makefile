@@ -39,7 +39,7 @@ obj-$(CONFIG_SVELTE)     +=  oplus/svelte/
 #endif /* OPLUS_FEATURE_MEMLEAK_DETECT */
 
 #ifdef OPLUS_BUG_STABILITY
-obj-y += oplus/xsystem/
+obj-y += oplus/system/
 #endif /* OPLUS_BUG_STABILITY */
 
 #ifdef OPLUS_FEATURE_TP_BASIC
