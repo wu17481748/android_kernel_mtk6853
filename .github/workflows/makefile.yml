@@ -67,7 +67,6 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         export PATH=$GITHUB_WORKSPACE/kernel_workspace/clang-aosp/bin:$GITHUB_WORKSPACE/kernel_workspace/gcc64/bin:$GITHUB_WORKSPACE/kernel_workspace/gcc32/bin:$PATH
-        export KBUILD_CFLAGS=-w
         export KBUILD_BUILD_HOST=24
         export KBUILD_BUILD_USER=kuan-jsbsbxjxh66
         make -s -j$(nproc --all) O=out ARCH=arm64 mt6853-ss_defconfig
