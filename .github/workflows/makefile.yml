@@ -12,10 +12,6 @@ jobs:
     - uses: actions/checkout@v3
 
 
-    - name: 环境变量配置
-      run: |
-            echo "KERNEL_CONFIG=mtk6853-ss_defconfig"
-
 
     - name: 构建编译内核环境
       run: |
@@ -74,7 +70,7 @@ jobs:
         export PATH=$GITHUB_WORKSPACE/kernel_workspace/clang-aosp/bin:$GITHUB_WORKSPACE/kernel_workspace/gcc64/bin:$GITHUB_WORKSPACE/kernel_workspace/gcc32/bin:$PATH
         export KBUILD_BUILD_HOST=17
         export KBUILD_BUILD_USER=HyperPower
-        make -s -j$(nproc --all) O=out ARCH=arm64 ${{ env.KERNEL_CONFIG }}
+        make -s -j$(nproc --all) O=out ARCH=arm64 mtk6853-ss_defconfig
         make -j$(nproc --all) CC="ccache clang" O=out ARCH=arm64 CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_ARM32=arm-linux-androideabi- LD=ld.lld
                 
 
