@@ -1,4 +1,5 @@
 name: 编译OPPO/Realme-安卓12-通用mt6853机型内核
+            支持ksu docker lxc kvm
 
 on:
   workflow_dispatch:
@@ -69,7 +70,7 @@ jobs:
         export KBUILD_CFLAGS=-w
         export KBUILD_BUILD_HOST=24
         export KBUILD_BUILD_USER=kuan-jsbsbxjxh66
-        make -s -j$(nproc --all) O=out ARCH=arm64 mtk6853-ss_defconfig
+        make -s -j$(nproc --all) O=out ARCH=arm64 mt6853-ss_defconfig
         make -j$(nproc --all) CC="ccache clang" O=out ARCH=arm64 CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_ARM32=arm-linux-androideabi- LD=ld.lld
                 
 
